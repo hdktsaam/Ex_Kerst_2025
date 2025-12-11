@@ -4,6 +4,10 @@ const welkom = (req, res) => {
   res.send("Welkom in user");
 };
 
+const getAllUsers = (req, res) => {
+  res.json(users);
+};
+
 const checkUser = (req, res) => {
   check_user = users.find(
     (user) => user.login == req.body.login && user.password == req.body.password
@@ -28,4 +32,5 @@ module.exports = {
   checkUser,
   changePSW,
   welkom,
+  getAllUsers,
 };

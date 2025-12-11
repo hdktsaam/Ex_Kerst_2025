@@ -6,7 +6,7 @@ const routes = express.Router();
 
 // routes aanmaken
 
-routes.get("/", spelersctrl.welkom)
+routes.get("/", spelersctrl.getAllUsers);
 routes.post("/", spelersctrl.checkUser);
 routes.patch("/", spelersctrl.changePSW);
 
